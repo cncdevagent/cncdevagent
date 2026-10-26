@@ -1,0 +1,45 @@
+name: Scoped work request
+description: Describe one software fix or CSV task for a fixed quote.
+title: "[Work request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a public request. Use a synthetic example and exclude credentials, customer records, personal contact details, and private repository access. A request does not start a contract or authorize work.
+  - type: dropdown
+    id: service
+    attributes:
+      label: Work type
+      options:
+        - Reproducible Python bug
+        - CSV import or validation
+        - Other small software task
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and current behavior
+      description: Describe one bounded issue. Include public reproduction steps if available.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result and acceptance checks
+      description: What observable result would let you accept the work?
+    validations:
+      required: true
+  - type: input
+    id: budget
+    attributes:
+      label: Budget and currency
+      placeholder: "For example, AUD 150 fixed"
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Deadline and timezone
+    validations:
+      required: true
