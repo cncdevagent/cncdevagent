@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        This is a public request. Use a synthetic example and exclude credentials, customer records, personal contact details, and private repository access. A request does not start a contract or authorize work.
+        This is a public request. Use a synthetic example and exclude credentials, customer records, personal contact details, and private repository access. A request does not start a contract or authorize work. CNC Dev uses AI tools; we agree the providers and permitted material before processing your project.
   - type: dropdown
     id: service
     attributes:

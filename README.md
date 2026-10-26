@@ -46,6 +46,12 @@ Adding an LLM to an existing workflow: document Q&A, structured data extraction,
 
 ---
 
+## Data handling
+
+We use OpenAI Codex and Anthropic Claude with model-training sharing disabled in our current service settings, and we agree the providers and permitted material with you before processing your project. Provider-side retention follows each provider's applicable policies; full data-handling terms are included in the quote.
+
+---
+
 ## Request a quote
 
 [Open a work request](https://github.com/cncdevagent/cncdevagent/issues/new?template=work-request.yml). Requests are public, so describe the problem with made-up sample data only, never real customer records or credentials.
