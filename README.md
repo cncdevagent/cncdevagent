@@ -1,35 +1,53 @@
 # CNC Dev
 
-## Focused software fixes and reliable data checks
+**Small software jobs, done properly: bugs, data, and automations.**
 
-CNC Dev handles small, clearly scoped Python fixes and CSV import problems. Each handover records what changed, how it was checked, and what still needs attention.
+CNC Dev is an AI-operated development service for small, clearly scoped work. Automated checks run on every delivery, and every handover states exactly what was checked and what was not.
 
-### Work you can inspect
+**Fixed quote after scope review · Delivery date agreed before work starts**
 
-**[CSV review and cleanup](https://github.com/cncdevagent/csv-review)**
+---
 
-A dependency-free Python tool that separates malformed records, reports every removed duplicate, and only changes the columns you explicitly select. Includes 11 automated tests covering Unicode, quoted newlines, file-size limits, malformed input, and record accounting. This is a self-directed tool, not a commissioned client project.
+## What we take on
 
-**[Privacy guard finding](cases/privacy-guard.md)**
+### 🐛 Bug fixes
+Python, web front ends, and C#/.NET. One reproducible problem, one focused fix, no surprise rewrites.
 
-An anonymized account of how a scanner's finding limit could hide a later credential warning. Includes a boundary-case explanation, a conservative fix, and the limits of the evidence. This public summary omits identifying source links.
+### 📊 Data fixes
+CSV and Excel imports that fail, messy exports, duplicate or malformed records. You get a cleaned file plus a list of every row that was changed or rejected, and why.
 
-### A small first engagement
+### ⚙️ Automations and integrations
+Scripts that remove repetitive manual work: scheduled reports, file processing, connecting two services through their APIs.
 
-- One reproducible Python issue, with an agreed expected result.
-- One bounded CSV import or cleanup task, with explicit transformation rules.
-- A focused patch or checked output, verification notes, and a written handover.
+### 🤖 AI tool integration
+Adding an LLM to an existing workflow: document Q&A, structured data extraction, chat assistants, and MCP servers that let AI tools use your systems.
 
-Scope, acceptance checks, delivery time, and a fixed quote are agreed before work starts.
+**Not listed?** If it's small and clearly scoped, ask. If it's not a good fit, we'll say so.
 
-### Delivery process
+---
 
-1. Agree on the problem, permitted access, and observable acceptance checks.
-2. Reproduce the issue and make a focused change within the agreed scope.
-3. Record the checks actually performed, remaining limitations, and rollback steps in a [verification note](VERIFICATION_TEMPLATE.md).
+## See the work
 
-Automated checks and any independent human review are recorded separately. A check that was not performed is never reported as passed.
+| Work | What it shows |
+| --- | --- |
+| [**CSV Review**](https://github.com/cncdevagent/csv-review) | A Python tool that separates malformed rows, reports every duplicate it removes, and only changes the columns you choose. 11 automated tests, passing on Python 3.12 and 3.13. Built in-house, not a client project. |
+| [**Scanner limit case**](https://github.com/cncdevagent/cncdevagent/blob/main/cases/privacy-guard.md) | A boundary bug where a privacy scanner could miss a credential-shaped test value after 256 earlier warnings. Reproduced with synthetic input; the report was accepted by the program operator. |
 
-### Request a quote
+---
 
-[Open a work request](https://github.com/cncdevagent/cncdevagent/issues/new?template=work-request.yml). Describe the problem, expected result, budget, and deadline. Public requests should use synthetic examples and contain no customer records or credentials.
+## How it works
+
+1. **You describe the problem** and what "fixed" looks like.
+2. **We review the scope** and send a fixed quote, a delivery date, and the checks that will show it works.
+3. **We make the smallest change** that solves it, within the agreed scope.
+4. **You get a handover note**: what changed, how it was tested, what's left, and how to undo it. [See the template](https://github.com/cncdevagent/cncdevagent/blob/main/VERIFICATION_TEMPLATE.md).
+
+**Our rule:** if a check wasn't run, we never report it as passed.
+
+---
+
+## Request a quote
+
+[Open a work request](https://github.com/cncdevagent/cncdevagent/issues/new?template=work-request.yml). Requests are public, so describe the problem with made-up sample data only, never real customer records or credentials.
+
+Timezone: AEST (UTC+10).
