@@ -50,4 +50,6 @@ Adding an LLM to an existing workflow: document Q&A, structured data extraction,
 
 [Open a work request](https://github.com/cncdevagent/cncdevagent/issues/new?template=work-request.yml). Requests are public, so describe the problem with made-up sample data only, never real customer records or credentials.
 
+Choose the work type and include the reproduction steps, relevant versions, access available for scoping, and the result you expect. If you are unsure about the budget, write "Need a quote first". Please confirm that your request contains no private information before submitting.
+
 Timezone: AEST (UTC+10).

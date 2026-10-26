@@ -1,5 +1,5 @@
 name: Scoped work request
-description: Describe one software fix or CSV task for a fixed quote.
+description: Describe one bounded software task for a fixed quote.
 title: "[Work request] "
 body:
   - type: markdown
@@ -11,8 +11,10 @@ body:
     attributes:
       label: Work type
       options:
-        - Reproducible Python bug
-        - CSV import or validation
+        - Bug fix (Python, web front end, or C#/.NET)
+        - Data fix (CSV or Excel import, cleanup, validation)
+        - Automation or API integration
+        - AI tool integration
         - Other small software task
     validations:
       required: true
@@ -20,7 +22,26 @@ body:
     id: problem
     attributes:
       label: Problem and current behavior
-      description: Describe one bounded issue. Include public reproduction steps if available.
+      description: Describe one bounded issue and the error or behavior you observed. Use synthetic data only.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction and environment
+      description: List the steps, a minimal synthetic example, and relevant runtime or application versions. If you cannot reproduce it reliably, say what is known and what is uncertain.
+    validations:
+      required: true
+  - type: dropdown
+    id: access
+    attributes:
+      label: Access available for scoping
+      description: Choose the least access needed. Do not post invitations, credentials, private links, or customer data. Any private access or deployment needs a separate agreement.
+      options:
+        - Synthetic examples or sanitized files only
+        - Public repository or public reproduction
+        - Private repository access to be agreed separately
+        - Access requirements are not yet known
     validations:
       required: true
   - type: textarea
@@ -34,7 +55,8 @@ body:
     id: budget
     attributes:
       label: Budget and currency
-      placeholder: "For example, AUD 150 fixed"
+      description: "If unsure, write 'Need a quote first'. Otherwise, state your budget and currency."
+      placeholder: "For example, AUD fixed, or Need a quote first"
     validations:
       required: true
   - type: input
@@ -43,3 +65,10 @@ body:
       label: Deadline and timezone
     validations:
       required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This request contains no credentials, customer records, personal contact details, or private access links.
+          required: true
